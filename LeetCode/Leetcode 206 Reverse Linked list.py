@@ -36,7 +36,7 @@ def displaylinkedlist(head):
 head = create_linked_list([1,3,4,7,9,2,5])
 displaylinkedlist(head)
 
-#Actual Soluition
+#Actual Solution
 def Reverselinkedlist(head):
     current = head
     prev = None
