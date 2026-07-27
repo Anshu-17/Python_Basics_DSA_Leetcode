@@ -95,6 +95,16 @@ def deletenodebyvalue(head, target_val):
     
     return head
 
+def Reverselinkedlist(head):
+    prev = None 
+    current = head
+    while current:
+        new_node = current.next
+        current.next = prev
+        
+        prev = current
+        current =  new_node
+    return prev
     
 head = create_linked_list([1,3,4,7,9,2,5])
 displaylinkedlist(head)
@@ -110,5 +120,9 @@ displaylinkedlist(head)
 
 head = deletenodebyvalue(head, 4)
 
-print("\nAfter Deleting Index 4:")
+print("\nAfter Deleting Element:")
 displaylinkedlist(head)
+
+reversed_list = Reverselinkedlist(head)
+print("\nReversed:")
+displaylinkedlist(reversed_list)
